@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+*{
+	box-sizing:border-box;
+	font-family:"Source sans pro", sans-serif
+	}
+a {color:#6cc091}
+a:hover {text-decoration:none}
+h1,h2,h3,h4,h5,h6{
+	color: #555;
+	font-weight: 600;
+	line-height: 1.5;
+	margin: 0 0 1em 0;
+}
+p{
+	margin: 0 0 2em 0;
+	color: #9a9a9a;
+}
+body{margin:0}
+.fina{font-weight:400!important}
+#wrapper{margin:auto;width:90%;}
+#nav{
+background: #6cc091;
+top: 0;
+height: 44px;
+line-height: 44px;
+position:fixed;
+color: #fff;
+cursor: default;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 10;}
+#nav ul {width:40%;margin-top:0;float:right;position:relative}
+.inner li { display: inline-block;padding: 0 0.75em;}
+.inner {margin: 0 auto; position: relative; max-width: 75em;}
+#nav a {text-decoration: none;color:#fff;}
+.inner > a {margin-left:5%}
+#header{text-align:center;margin-bottom:4em;margin-top:6em}
+.fila{ margin: 0 0 -1px -2em;}
+.box25,.box50,.box33,.box100{float:left;padding: 0 0 0 2em}
+.box100{width:100%}
+.box50{width:50%;}
+.box33{width: 33.3333333333%}
+.box25{width:25%;}
+hr{clear:both;}
+/*Estilos para iconos fontawesome*/
+.iconsList {list-style-type:none}
+.iconsList li {
+				display:inline-block;
+				float:left;
+				padding:0 10px}
+.iconsList li i {color:#6cc091;font-size:20px!important}
+/*Fin estilos iconos*/
+/*Estilos blockquote*/
+.mencion{
+	border-left:solid 1px grey;
+	padding-left:2.5em
+	}
+/*Tablas con banda para los pares*/
+tr:nth-child(even){background-color:#ff99fa}
+table.prices {border-collapse:collapse;width:100%}
+.num{text-align:right}
+td,th{font-size:12px}
+
+/*Css para imagenes*/
+.imgBig{width:100%}
+.thumbsList{list-style-type:none;padding-left:0;margin-left:-3px}
+.thumbsList li {width:33.3333333%;float:left;}
+.thumbsList img {width:100%;border-left:solid 4px #fff}
+.imgParrafoIzq{float:left;margin-right:4%}
+.imgParrafoDer{float:right;margin-left:4%}
+/*arreglos para los padding de más en los box hijos*/
+.noPadding{padding:0}
+
+
+
+
+
+
+
+
+
+
+
