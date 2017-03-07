@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2017 a las 16:36:28
+-- Tiempo de generación: 07-03-2017 a las 16:02:09
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -172,8 +172,9 @@ CREATE TABLE `platos` (
 --
 
 INSERT INTO `platos` (`id`, `nombre`, `precio`, `descripcion`, `foto`, `id_categoria`, `activado`) VALUES
-(1, 'Cuajada', '4.00', 'Exquisita cuajada', 'img/cat/principales.jpg', 0, 'on'),
-(2, 'Escarola con anchoas', '5.00', 'Escarola de temporada limpiada y cuidadosamente seleccionada de nuestro propio huerto.', 'img/escarolaAnchoas.jpg', 0, NULL);
+(1, 'Cuajada', '4.00', 'Exquisita cuajada', 'img/cat/principales.jpg', 3, 'on'),
+(2, 'Escarola con anchoas', '5.00', 'Escarola de temporada limpiada y cuidadosamente seleccionada de nuestro propio huerto.', 'img/escarolaAnchoas.jpg', 1, NULL),
+(3, 'Ejemplo plato', '5.00', 'Texto de ejemplo', 'img/fotoejemplo.jpg', 3, 'on');
 
 --
 -- Índices para tablas volcadas
@@ -248,7 +249,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `platos`
 --
 ALTER TABLE `platos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
