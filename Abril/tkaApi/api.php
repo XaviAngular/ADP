@@ -38,6 +38,7 @@ $app->post("/editPlato/:id", function($id) use($db, $app) {
 			. "activado = '{$data["activado"]}', "
 			. "descripcion = '{$data["descripcion"]}', "
 			. "precio = '{$data["precio"]}', "
+			. "id_categoria = '{$data["id_categoria"]}', "
 			. "foto = '{$data["foto"]}' "
 			. " WHERE id={$id}";
 	$update = $db->query($query);
@@ -51,6 +52,37 @@ $app->post("/editPlato/:id", function($id) use($db, $app) {
 	echo json_encode($result);
 });
 
+$app->get("/getCats", function() use($db, $app) {
+	$query = $db->query("SELECT * FROM platos");
+	$platos = array();
+	while ($fila = $query->fetch_assoc()) {
+		$platos[] = $fila;
+	}
+	echo json_encode([
+		"status" 	=> "success",
+		"data"		=> $platos
+		]);		
+});
+
+$app->post("/addContact",function() use($db,$app){
+	$json = $app->request->post("json");
+	$data = json_decode($json, true);
+	$query= "INSERT INTO contactform VALUES (null,"
+		."'{$data["nombreApellidos"]}',"
+		."'{$data["email"]}',"
+		."'{$data["mensaje"]}'"
+		.",null)";
+	$update = $db->query($query);
+
+	if ($update) {
+		$result = array("status" => "success", "message" => "El contacto se ha registrado correctamente!!!");
+	} else {
+		$result = array("status" => "error", "message" => $query);
+	}
+
+	echo json_encode($result);
+
+});
 
 $app->run();
 
